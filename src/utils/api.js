@@ -18,6 +18,10 @@ class IronbeerService {
   addBeer(beer) {
     return this.service.post('/beer', beer);
   }
+
+  searchBeer(query) {
+    return this.service.get(`/search?q=${query}`);
+  }
 }
 
 export default IronbeerService;
