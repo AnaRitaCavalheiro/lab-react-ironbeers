@@ -29,6 +29,10 @@ class BeerList extends React.Component {
   render() {
     return (
       <div>
+        <h3>List of Beers</h3>
+        <form>
+          <input onchange={this.handleSearchBeer}></input>
+        </form>
         {this.state.beers.map((beers, index) => {
           return (
             <div key={index}>
